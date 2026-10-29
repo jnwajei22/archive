@@ -1,0 +1,20 @@
+[Unit]
+Description=Agentic Forex Desk autonomous scheduler worker
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=agentic-forex
+WorkingDirectory=/opt/agentic-forex-desk
+EnvironmentFile=/opt/agentic-forex-desk/.env
+ExecStart=/opt/agentic-forex-desk/.venv/bin/python -m app.jobs.autonomous_scheduler
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
+
