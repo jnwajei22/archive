@@ -1,0 +1,22 @@
+{
+  "name": "agentic-forex-market-chart",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/ext-apps": "1.7.2",
+    "lightweight-charts": "5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.0.14",
+    "jsdom": "26.1.0",
+    "typescript": "5.9.2",
+    "vite": "7.3.6",
+    "vite-plugin-singlefile": "2.3.0",
+    "vitest": "3.2.7"
+  }
+}
